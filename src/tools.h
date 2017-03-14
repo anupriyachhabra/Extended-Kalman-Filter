@@ -25,6 +25,10 @@ public:
   */
   Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x_state);
 
+  Eigen::VectorXd CalculateMeasurement(const Eigen::VectorXd& x_state);
+
+  double NormalizeAngle(double x);
+
 };
 
 #endif /* TOOLS_H_ */
