@@ -87,6 +87,11 @@ VectorXd Tools::CalculateMeasurement(const VectorXd& x_state) {
   return z_pred;
 }
 
+/**
+ * This function normalizes an angle to be between -180 and 180 degrees
+ * @param x Any angle
+ * @return Normalized angle between -180 and 180
+ */
 double Tools::NormalizeAngle(double x){
   x = fmod(x + 180,360);
   if (x < 0)
